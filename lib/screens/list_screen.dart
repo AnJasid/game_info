@@ -9,6 +9,11 @@ class ListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('List Screen'),
       ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[500],
+        ),
+      ),
     );
   }
 }

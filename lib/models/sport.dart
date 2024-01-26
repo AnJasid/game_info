@@ -1,5 +1,5 @@
-class SportModel {
-  const SportModel({
+class Sport {
+  const Sport({
     required this.title,
     required this.text,
   });
