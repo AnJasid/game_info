@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:game_info/models/screens/list_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  void _goToListScreen(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const ListScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +23,13 @@ class HomeScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: const Center(
-          child: Text('Proceed'),
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              _goToListScreen(context);
+            },
+            child: const Text('Proceed'),
+          ),
         ),
       ),
     );
