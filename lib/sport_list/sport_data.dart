@@ -10,5 +10,17 @@ class SportData {
       title: 'Football',
       text: 'text',
     ),
+    const Sport(
+      title: 'Basketball',
+      text: 'text',
+    ),
+    const Sport(
+      title: 'Tennis',
+      text: 'text',
+    ),
+    const Sport(
+      title: 'Volleyball',
+      text: 'text',
+    ),
   ];
 }
