@@ -11,9 +11,15 @@ class SportItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(sport.title),
-      subtitle: Text(sport.text),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Container(
+        height: 200,
+        width: 200,
+        decoration: const BoxDecoration(
+          color: Colors.black,
+        ),
+      ),
     );
   }
 }

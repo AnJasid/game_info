@@ -10,7 +10,15 @@ class ListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('List Screen'),
       ),
-      body: const SportList(),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[300],
+        ),
+        child: const Padding(
+          padding: EdgeInsets.all(8),
+          child: SportList(),
+        ),
+      ),
     );
   }
 }
