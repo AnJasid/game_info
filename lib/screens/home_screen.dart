@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/BG.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
+            // image: DecorationImage(
+            //   image: AssetImage('assets/BG.png'),
+            //   fit: BoxFit.cover,
+            // ),
+            ),
         child: Center(
           child: ElevatedButton(
             onPressed: () {
