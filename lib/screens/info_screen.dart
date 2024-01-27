@@ -11,11 +11,23 @@ class InfoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(sportInfo.title),
-        Text(sportInfo.text),
-      ],
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            sportInfo.title,
+            style: const TextStyle(fontSize: 15),
+          ),
+          Text(
+            sportInfo.text,
+            style: const TextStyle(fontSize: 15),
+          ),
+        ],
+      ),
     );
   }
 }

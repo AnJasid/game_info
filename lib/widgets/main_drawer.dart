@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game_info/screens/about_screen.dart';
 import 'package:game_info/screens/home_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -8,6 +9,14 @@ class MainDrawer extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => const HomeScreen(),
+      ),
+    );
+  }
+
+  void _goToAboutScreen(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const AboutScreen(),
       ),
     );
   }
@@ -64,7 +73,9 @@ class MainDrawer extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              _goToAboutScreen(context);
+            },
           ),
         ],
       ),

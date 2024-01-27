@@ -9,6 +9,15 @@ class AboutScreen extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Back'),
+          ),
+        ],
+      ),
     );
   }
 }

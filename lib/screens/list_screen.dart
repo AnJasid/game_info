@@ -10,6 +10,7 @@ class ListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('List Screen'),
+        centerTitle: true,
       ),
       drawer: const MainDrawer(),
       body: Container(
