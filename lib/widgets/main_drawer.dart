@@ -21,6 +21,15 @@ class MainDrawer extends StatelessWidget {
     );
   }
 
+  void showAboutScreen(BuildContext context) {
+    showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
+      context: context,
+      builder: (ctx) => const AboutScreen(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -74,7 +83,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              _goToAboutScreen(context);
+              showAboutScreen(context);
             },
           ),
         ],

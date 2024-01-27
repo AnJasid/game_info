@@ -26,6 +26,12 @@ class InfoScreen extends StatelessWidget {
             sportInfo.text,
             style: const TextStyle(fontSize: 15),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Back'),
+          ),
         ],
       ),
     );
