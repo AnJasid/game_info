@@ -13,7 +13,7 @@ class SportItem extends StatelessWidget {
   void _goToInfoScreen(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => const InfoScreen(),
+        builder: (ctx) => InfoScreen(sportInfo: sport),
       ),
     );
   }
