@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:game_info/screens/home_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
+
+  void _goToHomeScreen(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const HomeScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +48,9 @@ class MainDrawer extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              _goToHomeScreen(context);
+            },
           ),
           ListTile(
             leading: const Icon(
