@@ -4,8 +4,23 @@ import 'package:game_info/provider/theme_provider.dart';
 import 'package:game_info/screens/about_screen.dart';
 import 'package:game_info/screens/home_screen.dart';
 
-class MainDrawer extends ConsumerWidget {
+class MainDrawer extends ConsumerStatefulWidget {
   const MainDrawer({super.key});
+
+  @override
+  ConsumerState<MainDrawer> createState() => _MainDrawerState();
+}
+
+class _MainDrawerState extends ConsumerState<MainDrawer> {
+  final MaterialStateProperty<Icon?> thumbIcon =
+      MaterialStateProperty.resolveWith<Icon?>(
+    (Set<MaterialState> states) {
+      if (states.contains(MaterialState.selected)) {
+        return const Icon(Icons.wb_sunny);
+      }
+      return const Icon(Icons.brightness_3);
+    },
+  );
 
   void _goToHomeScreen(BuildContext context) {
     Navigator.of(context).push(
@@ -33,7 +48,7 @@ class MainDrawer extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final isLightTheme = ref.watch(themeProvider);
     return Drawer(
       child: Column(
@@ -91,21 +106,10 @@ class MainDrawer extends ConsumerWidget {
           ),
           ListTile(
             leading: Switch(
+              thumbIcon: thumbIcon,
               value: isLightTheme,
               onChanged: (value) =>
                   ref.read(themeProvider.notifier).state = value,
-              activeColor: Colors.green, // Customized active track color
-              inactiveThumbColor:
-                  Colors.grey, // Customized inactive thumb color
-              activeTrackColor:
-                  Colors.lightGreenAccent, // Customized active track color
-              inactiveTrackColor:
-                  Colors.grey[350], // Customized inactive track color
-              thumbColor: MaterialStateProperty.all(
-                  Colors.blue), // Customized thumb color
-              // Add labels for clarity (optional)
-              // activeLabel: Text('On'),
-              // inactiveLabel: Text('Off'),
             ),
             title: const Text(
               'THEME',
