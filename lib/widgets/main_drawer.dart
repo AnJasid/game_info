@@ -89,11 +89,31 @@ class MainDrawer extends ConsumerWidget {
               showAboutScreen(context);
             },
           ),
-          Switch(
-            value: isLightTheme,
-            onChanged: (value) =>
-                ref.read(themeProvider.notifier).state = value,
-          )
+          ListTile(
+            leading: Switch(
+              value: isLightTheme,
+              onChanged: (value) =>
+                  ref.read(themeProvider.notifier).state = value,
+              activeColor: Colors.green, // Customized active track color
+              inactiveThumbColor:
+                  Colors.grey, // Customized inactive thumb color
+              activeTrackColor:
+                  Colors.lightGreenAccent, // Customized active track color
+              inactiveTrackColor:
+                  Colors.grey[350], // Customized inactive track color
+              thumbColor: MaterialStateProperty.all(
+                  Colors.blue), // Customized thumb color
+              // Add labels for clarity (optional)
+              // activeLabel: Text('On'),
+              // inactiveLabel: Text('Off'),
+            ),
+            title: const Text(
+              'THEME',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ),
         ],
       ),
     );
