@@ -41,7 +41,7 @@ class MainDrawer extends ConsumerWidget {
           const DrawerHeader(
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.amber,
+              color: Color(0xff206464),
             ),
             child: Row(
               children: [
