@@ -57,9 +57,9 @@ class SportItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 5),
-                const Text(
-                  'Name',
-                  style: TextStyle(color: Colors.white),
+                Text(
+                  sport.playerName,
+                  style: const TextStyle(color: Colors.white),
                 ),
                 const SizedBox(height: 5),
                 Container(
