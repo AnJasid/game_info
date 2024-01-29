@@ -27,7 +27,7 @@ class SportItem extends StatelessWidget {
           _goToInfoScreen(context);
         },
         child: Container(
-          height: 200,
+          height: 180,
           decoration: BoxDecoration(
             // gradient: const LinearGradient(
             //   begin: Alignment.topLeft,
@@ -44,12 +44,45 @@ class SportItem extends StatelessWidget {
             ),
           ),
           child: Stack(
+            fit: StackFit.expand,
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.asset(
                   sport.imagePath,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              // ignore: prefer_const_constructors
+              Positioned(
+                bottom: 1,
+                left: 20,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Name',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'View Info',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                  ],
                 ),
               )
             ],
