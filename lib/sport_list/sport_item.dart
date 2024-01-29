@@ -21,16 +21,27 @@ class SportItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
       child: GestureDetector(
         onTap: () {
           _goToInfoScreen(context);
         },
         child: Container(
           height: 200,
-          width: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.black,
+            borderRadius: BorderRadius.circular(15),
+            border: Border.all(
+              color: Colors.white,
+              width: 2.0,
+            ),
+          ),
+          child: Center(
+            child: Container(
+              width: 150,
+              height: 150,
+              child: Image.asset('assets/example.png'),
+            ),
           ),
         ),
       ),
