@@ -7,5 +7,20 @@ class SportData {
       title: 'Cricket',
       text: 'text',
     ),
+    const Sport(
+      imagePath: 'assets/example.png',
+      title: 'Cricket',
+      text: 'text',
+    ),
+    const Sport(
+      imagePath: 'assets/example.png',
+      title: 'Cricket',
+      text: 'text',
+    ),
+    const Sport(
+      imagePath: 'assets/example.png',
+      title: 'Cricket',
+      text: 'text',
+    ),
   ];
 }

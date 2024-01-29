@@ -8,14 +8,27 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff206464),
       appBar: AppBar(
-        title: const Text('List Screen'),
+        backgroundColor: const Color(0xff206464),
+        title: const Text(
+          'List Screen',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
       ),
       drawer: const MainDrawer(),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: Colors.grey[900],
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
         ),
         child: const Padding(
           padding: EdgeInsets.all(8),
