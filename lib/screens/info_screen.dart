@@ -11,28 +11,28 @@ class InfoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
+    return Scaffold(
+      backgroundColor: const Color(0xff206464),
+      appBar: AppBar(
+        backgroundColor: const Color(0xff206464),
+        title: const Text(
+          'Info Screen',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            sportInfo.title,
-            style: const TextStyle(fontSize: 15),
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
           ),
-          Text(
-            sportInfo.text,
-            style: const TextStyle(fontSize: 15),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Back'),
-          ),
-        ],
+        ),
       ),
     );
   }

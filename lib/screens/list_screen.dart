@@ -23,10 +23,9 @@ class ListScreen extends StatelessWidget {
       ),
       drawer: const MainDrawer(),
       body: Container(
-        // ignore: prefer_const_constructors
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
-          borderRadius: const BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
           ),
