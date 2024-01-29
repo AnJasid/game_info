@@ -35,8 +35,8 @@ class SportItem extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.topRight,
               colors: [
-                Color(0xffD0E9F5),
-                Color(0xffA9CCE3),
+                Color(0xff008080),
+                Color(0xff1A4B4B),
               ],
             ),
             borderRadius: BorderRadius.circular(15),
@@ -57,7 +57,10 @@ class SportItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 5),
-                const Text('Name'),
+                const Text(
+                  'Name',
+                  style: TextStyle(color: Colors.white),
+                ),
                 const SizedBox(height: 5),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
