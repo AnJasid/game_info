@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:game_info/provider/theme_provider.dart';
 import 'package:game_info/screens/about_screen.dart';
 import 'package:game_info/screens/home_screen.dart';
 
-class MainDrawer extends StatelessWidget {
+class MainDrawer extends ConsumerWidget {
   const MainDrawer({super.key});
 
   void _goToHomeScreen(BuildContext context) {
@@ -31,7 +33,8 @@ class MainDrawer extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isLightTheme = ref.watch(themeProvider);
     return Drawer(
       child: Column(
         children: [
@@ -86,6 +89,11 @@ class MainDrawer extends StatelessWidget {
               showAboutScreen(context);
             },
           ),
+          Switch(
+            value: isLightTheme,
+            onChanged: (value) =>
+                ref.read(themeProvider.notifier).state = value,
+          )
         ],
       ),
     );
