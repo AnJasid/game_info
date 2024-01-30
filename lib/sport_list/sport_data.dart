@@ -88,7 +88,8 @@ class SportData {
     const Sport(
       imagePath: 'assets/ViratKohli.png',
       playerName: 'Virat Kohli',
-      playerInfo: '',
+      playerInfo:
+          'Virat Kohli, the Indian cricket maestro, has etched an illustrious career defined by prolific run-scoring and dynamic leadership. Regarded as one of the finest batsmen in the modern era, Kohli has set numerous records across all formats. He became the fastest player to reach 8,000, 9,000, 10,000, and 11,000 runs in One Day Internationals (ODIs). Kohli\'s captaincy has been equally impactful, guiding India to historic Test series victories abroad, including the 2018-2019 series win in Australia. Under his leadership, India achieved the No. 1 ranking in Test cricket. Kohli has received numerous awards, including the Sir Garfield Sobers Trophy for ICC Cricketer of the Year multiple times and the Rajiv Gandhi Khel Ratna, India\'s highest sporting honor. His commitment to fitness and unmatched consistency in run-scoring have solidified his legacy as one of cricket\'s all-time greats.',
     ),
   ];
 }

@@ -38,6 +38,7 @@ dependencies:
   flutter_native_splash: ^2.3.9
   flutter_riverpod: ^2.4.9
   shared_preferences: ^2.2.2
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
