@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:game_info/provider/theme_provider.dart';
 import 'package:game_info/sport_list/sport_list.dart';
 import 'package:game_info/widgets/main_drawer.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ListScreen extends StatelessWidget {
+class ListScreen extends ConsumerWidget {
   const ListScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isLightTheme = ref.watch(themeProvider);
     return Scaffold(
       backgroundColor: const Color(0xff206464),
       appBar: AppBar(
