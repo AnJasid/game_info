@@ -11,11 +11,13 @@ class ListScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isLightTheme = ref.watch(themeProvider);
     return Scaffold(
-      backgroundColor: const Color(0xff206464),
+      backgroundColor:
+          isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
       appBar: AppBar(
-        backgroundColor: const Color(0xff206464),
+        backgroundColor:
+            isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
         title: const Text(
-          'List Screen',
+          'Cricket Icons',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w500,
@@ -26,9 +28,9 @@ class ListScreen extends ConsumerWidget {
       ),
       drawer: const MainDrawer(),
       body: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          color: isLightTheme ? Colors.white : Colors.black45,
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
           ),
