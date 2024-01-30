@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:game_info/models/sport.dart';
+import 'package:game_info/provider/theme_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class InfoScreen extends StatelessWidget {
+class InfoScreen extends ConsumerWidget {
   const InfoScreen({
     super.key,
     required this.sportInfo,
@@ -11,11 +13,14 @@ class InfoScreen extends StatelessWidget {
   final Sport sportInfo;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isLightTheme = ref.watch(themeProvider);
     return Scaffold(
-      backgroundColor: const Color(0xff206464),
+      backgroundColor:
+          isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
       appBar: AppBar(
-        backgroundColor: const Color(0xff206464),
+        backgroundColor:
+            isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
         title: const Text(
           'Info Screen',
           style: TextStyle(
@@ -31,9 +36,9 @@ class InfoScreen extends StatelessWidget {
           horizontal: 25,
           vertical: 20,
         ),
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          color: isLightTheme ? Colors.white : Colors.black45,
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
           ),
@@ -107,13 +112,11 @@ class InfoScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).pop(),
-        child: Text(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: const Text(
           'Okay',
-          style: GoogleFonts.roboto(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: const Color.fromARGB(255, 48, 4, 4),
-          ),
         ),
       ),
     );
