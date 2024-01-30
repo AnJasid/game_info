@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_info/models/sport.dart';
+import 'package:game_info/utils/button_utils.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({
@@ -96,12 +97,10 @@ class InfoScreen extends StatelessWidget {
                 child: Text(sportInfo.playerInfo),
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text('Back'),
-              ),
+              ButtonUtils(
+                onTap: () => Navigator.of(context).pop(),
+                buttonText: 'Okay',
+              )
             ],
           ),
         ),
