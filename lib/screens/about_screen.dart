@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game_info/utils/button_utils.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -14,11 +15,18 @@ class AboutScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Back'),
+          Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                border: Border.all(
+              color: Colors.black,
+              width: 2.0,
+            )),
+          ),
+          ButtonUtils(
+            onTap: () => Navigator.pop(context),
+            buttonText: 'Back',
           ),
         ],
       ),
