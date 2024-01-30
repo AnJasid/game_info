@@ -41,7 +41,7 @@ class InfoScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 10,
                 ),
@@ -70,11 +70,12 @@ class InfoScreen extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
+                        child: Image.asset(sportInfo.imagePath),
                       ),
                       const SizedBox(height: 10),
-                      const Text(
-                        'Name',
-                        style: TextStyle(color: Colors.white),
+                      Text(
+                        sportInfo.playerName,
+                        style: const TextStyle(color: Colors.white),
                       ),
                     ],
                   ),
@@ -92,7 +93,7 @@ class InfoScreen extends StatelessWidget {
                     width: 1.0,
                   ),
                 ),
-                child: const Text(''),
+                child: Text(sportInfo.playerInfo),
               ),
               const SizedBox(height: 30),
               ElevatedButton(

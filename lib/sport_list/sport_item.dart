@@ -55,7 +55,7 @@ class SportItem extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
-                  child: Image.asset('assets/AbrahamBenjamindeVilliers.png'),
+                  child: Image.asset(sport.imagePath),
                 ),
                 const SizedBox(height: 5),
                 Text(
