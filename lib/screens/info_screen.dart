@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_info/models/sport.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({
@@ -85,28 +86,35 @@ class InfoScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(15),
                 width: double.infinity,
+                height: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.black.withOpacity(0.01),
+                  color: Colors.black.withOpacity(0.03),
                   border: Border.all(
                     color: Colors.amber,
-                    width: 1.0,
+                    width: 1.5,
                   ),
                 ),
-                child: Text(sportInfo.playerInfo),
+                child: SingleChildScrollView(
+                  child: SizedBox(
+                    child: Text(sportInfo.playerInfo),
+                  ),
+                ),
               ),
-              const SizedBox(height: 30),
-              // ButtonUtils(
-              //   onTap: () => Navigator.of(context).pop(),
-              //   buttonText: 'Okay',
-              // ),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).pop(),
-        child: const Text('Okay'),
+        child: Text(
+          'Okay',
+          style: GoogleFonts.roboto(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: const Color.fromARGB(255, 48, 4, 4),
+          ),
+        ),
       ),
     );
   }
