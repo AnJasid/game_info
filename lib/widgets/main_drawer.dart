@@ -65,10 +65,10 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                 //   size: 48,
                 //   color: Colors.black,
                 // ),
-                SizedBox(width: 18),
-                Text(
-                  '',
-                ),
+                // SizedBox(width: 18),
+                // Text(
+                //   '',
+                // ),
               ],
             ),
           ),
@@ -76,7 +76,6 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
             leading: const Icon(
               Icons.home,
               size: 25,
-              color: Colors.black,
             ),
             title: const Text(
               'HOME',
@@ -92,7 +91,6 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
             leading: const Icon(
               Icons.info,
               size: 25,
-              color: Colors.black,
             ),
             title: const Text(
               'ABOUT',
