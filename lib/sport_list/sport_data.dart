@@ -95,6 +95,6 @@ class SportData {
 }
 
 class AppAbout {
-  static String appAbout =
+  final String appInfo =
       'Cricket Win Icons is an app about celebrating the achievements of cricket legends worldwide. Dive into the fascinating careers of iconic players who have left an indelible mark on the sport. Discover their triumphs, awards, and the defining moments that have shaped cricket history. From record-breaking performances to extraordinary feats, Cricket Win Icons is your curated collection of the best in the world of cricket. Join us in honoring the greatness of these players and relive the excitement of their extraordinary journeys.';
 }
