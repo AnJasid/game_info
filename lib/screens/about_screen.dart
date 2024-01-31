@@ -23,12 +23,16 @@ class AboutScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             width: 300,
             height: 300,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     width: 1.0,
-            //   ),
-            // ),
-            child: Text(aboutApp.appInfo.toString()),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.amber,
+                width: 1.5,
+              ),
+            ),
+            child: Text(
+              aboutApp.appInfo.toString(),
+              textAlign: TextAlign.center,
+            ),
           ),
           const SizedBox(height: 30),
           ButtonUtils(
