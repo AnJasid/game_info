@@ -22,7 +22,7 @@ class InfoScreen extends ConsumerWidget {
         backgroundColor:
             isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
         title: const Text(
-          'Info Screen',
+          'Player Spotlight',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w500,
