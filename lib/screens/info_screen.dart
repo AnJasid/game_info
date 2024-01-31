@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_info/models/sport.dart';
 import 'package:game_info/provider/theme_provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class InfoScreen extends ConsumerWidget {
