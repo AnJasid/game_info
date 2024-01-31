@@ -53,12 +53,14 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
     return Drawer(
       child: Column(
         children: [
-          const DrawerHeader(
-            padding: EdgeInsets.all(20),
+          DrawerHeader(
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Color(0xff206464),
+              color: isLightTheme
+                  ? const Color(0xff206464)
+                  : const Color(0xff001f3f),
             ),
-            child: Row(
+            child: const Row(
               children: [
                 // Icon(
                 //   Icons.home,
