@@ -39,6 +39,11 @@ class HomeScreen extends ConsumerWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                'assets/applogo.png',
+                width: 360,
+              ),
+              const SizedBox(height: 150),
               ButtonUtils(
                 onTap: () => _goToListScreen(context),
                 buttonText: 'Start',
