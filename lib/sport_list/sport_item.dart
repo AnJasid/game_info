@@ -44,6 +44,14 @@ class SportItem extends StatelessWidget {
               color: Colors.amber,
               width: 1.5,
             ),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black,
+                spreadRadius: 0,
+                blurRadius: 8,
+                offset: Offset(2, 3),
+              ),
+            ],
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
