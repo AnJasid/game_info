@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:game_info/provider/theme_provider.dart';
 import 'package:game_info/screens/list_screen.dart';
 import 'package:game_info/utils/button_utils.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   void _goToListScreen(BuildContext context) {
@@ -20,33 +22,35 @@ class HomeScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isLightTheme = ref.watch(themeProvider);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor:
+            isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
       ),
       body: Container(
-        decoration: const BoxDecoration(
-            // image: DecorationImage(
-            //   image: AssetImage('assets/BG.png'),
-            //   fit: BoxFit.cover,
-            // ),
-            ),
+        decoration: BoxDecoration(
+          color:
+              isLightTheme ? const Color(0xff206464) : const Color(0xff001f3f),
+        ),
         child: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ButtonUtils(
-              onTap: () => _goToListScreen(context),
-              buttonText: 'Start',
-            ),
-            const SizedBox(height: 10),
-            ButtonUtils(
-              onTap: _exitApp,
-              buttonText: 'Exit',
-            ),
-          ],
-        )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ButtonUtils(
+                onTap: () => _goToListScreen(context),
+                buttonText: 'Start',
+              ),
+              const SizedBox(height: 10),
+              ButtonUtils(
+                onTap: _exitApp,
+                buttonText: 'Exit',
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

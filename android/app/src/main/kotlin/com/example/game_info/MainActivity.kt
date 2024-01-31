@@ -1,4 +1,4 @@
-package com.example.game_info
+package com.infoIQ.cricketicons
 
 import io.flutter.embedding.android.FlutterActivity
 

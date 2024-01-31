@@ -93,3 +93,7 @@ class SportData {
     ),
   ];
 }
+
+class AppAbout {
+  static String appAbout = 'Cricket Win Icons';
+}
