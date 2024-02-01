@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_info/provider/theme_provider.dart';
-import 'package:game_info/sport_list/sport_list.dart';
+import 'package:game_info/player_list/player_list.dart';
 import 'package:game_info/widgets/main_drawer.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -37,7 +37,7 @@ class ListScreen extends ConsumerWidget {
         ),
         child: const Padding(
           padding: EdgeInsets.all(8),
-          child: SportList(),
+          child: PlayerList(),
         ),
       ),
     );

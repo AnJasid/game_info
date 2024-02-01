@@ -30,14 +30,6 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
     );
   }
 
-  void _goToAboutScreen(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (ctx) => const AboutScreen(),
-      ),
-    );
-  }
-
   void showAboutScreen(BuildContext context) {
     showModalBottomSheet(
       useSafeArea: true,

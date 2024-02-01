@@ -1,5 +1,5 @@
-class Sport {
-  const Sport({
+class Players {
+  const Players({
     required this.imagePath,
     required this.playerName,
     required this.playerInfo,

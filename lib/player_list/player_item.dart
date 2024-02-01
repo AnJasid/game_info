@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:game_info/models/sport.dart';
+import 'package:game_info/models/players.dart';
 import 'package:game_info/screens/info_screen.dart';
 
-class SportItem extends StatelessWidget {
-  const SportItem({
+class PlayerItem extends StatelessWidget {
+  const PlayerItem({
     super.key,
     required this.sport,
   });
 
-  final Sport sport;
+  final Players sport;
 
   void _goToInfoScreen(BuildContext context) {
     Navigator.of(context).push(

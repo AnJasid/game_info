@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_info/models/sport.dart';
+import 'package:game_info/models/players.dart';
 import 'package:game_info/provider/theme_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,7 +9,7 @@ class InfoScreen extends ConsumerWidget {
     required this.sportInfo,
   });
 
-  final Sport sportInfo;
+  final Players sportInfo;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

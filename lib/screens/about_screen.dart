@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_info/sport_list/sport_data.dart';
+import 'package:game_info/player_list/player_data.dart';
 import 'package:game_info/utils/button_utils.dart';
 
 class AboutScreen extends StatelessWidget {

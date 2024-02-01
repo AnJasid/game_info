@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870749018421",
+    "project_id": "cricket-icon",
+    "storage_bucket": "cricket-icon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870749018421:android:6eaa0e7862cf8efda6147c",
+        "android_client_info": {
+          "package_name": "com.infoIQ.cricketicons"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHAfpma1W_HuJVL4nwfUtOueg7Zu_rvdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
